@@ -69,5 +69,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: ssh://git@github.com:zxiang179/myBlog.github.io.git
+  repo: git@github.com:zxiang179/myBlog.github.io.git
   branch: master

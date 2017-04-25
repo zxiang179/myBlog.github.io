@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JVM," />
 
 
 
@@ -87,12 +87,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="JVMjava虚拟机的原理与概述虚拟机可分为系统虚拟机和程序虚拟机系统虚拟机对物理计算机仿真。程序虚拟机是对物理计算机的仿真。 JVM结构-  类加载子系统：负责从文件系统或者网络加载class信息，加载的信息存放在一款称之为方法区的内存空间。 方法区：存放类信息、常量信息、常量池信息、包括字符串字面量和数字常量等。    java堆：在JVM启动是建立java堆，它是java程序最主要的内存工作">
+<meta name="keywords" content="JVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My New Post">
+<meta property="og:url" content="http://yoursite.com/2017/04/25/My-New-Post/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JVMjava虚拟机的原理与概述虚拟机可分为系统虚拟机和程序虚拟机系统虚拟机对物理计算机仿真。程序虚拟机是对物理计算机的仿真。 JVM结构-  类加载子系统：负责从文件系统或者网络加载class信息，加载的信息存放在一款称之为方法区的内存空间。 方法区：存放类信息、常量信息、常量池信息、包括字符串字面量和数字常量等。    java堆：在JVM启动是建立java堆，它是java程序最主要的内存工作">
+<meta property="og:image" content="http://i.imgur.com/Z7r0Cbb.png">
+<meta property="og:image" content="http://i.imgur.com/In7BjBb.png">
+<meta property="og:image" content="http://i.imgur.com/6GTEbN9.png">
+<meta property="og:image" content="http://i.imgur.com/aZe540b.png">
+<meta property="og:updated_time" content="2017-04-25T04:18:11.444Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="My New Post">
+<meta name="twitter:description" content="JVMjava虚拟机的原理与概述虚拟机可分为系统虚拟机和程序虚拟机系统虚拟机对物理计算机仿真。程序虚拟机是对物理计算机的仿真。 JVM结构-  类加载子系统：负责从文件系统或者网络加载class信息，加载的信息存放在一款称之为方法区的内存空间。 方法区：存放类信息、常量信息、常量池信息、包括字符串字面量和数字常量等。    java堆：在JVM启动是建立java堆，它是java程序最主要的内存工作">
+<meta name="twitter:image" content="http://i.imgur.com/Z7r0Cbb.png">
 
 
 
@@ -120,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/25/My-New-Post/"/>
 
 
 
 
 
-  <title> Hexo </title>
+  <title> My New Post | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -151,9 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -268,10 +276,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/25/My-New-Post/" itemprop="url">
-                  My New Post
-                </a>
+                My New Post
               
             
           </h1>
@@ -322,9 +327,7 @@
       
 
       
-        
-          
-            <h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><h2 id="java虚拟机的原理与概述"><a href="#java虚拟机的原理与概述" class="headerlink" title="java虚拟机的原理与概述"></a>java虚拟机的原理与概述</h2><p>虚拟机可分为<strong>系统虚拟机</strong>和<strong>程序虚拟机</strong><br>系统虚拟机对物理计算机仿真。<br>程序虚拟机是对物理计算机的仿真。</p>
+        <h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><h2 id="java虚拟机的原理与概述"><a href="#java虚拟机的原理与概述" class="headerlink" title="java虚拟机的原理与概述"></a>java虚拟机的原理与概述</h2><p>虚拟机可分为<strong>系统虚拟机</strong>和<strong>程序虚拟机</strong><br>系统虚拟机对物理计算机仿真。<br>程序虚拟机是对物理计算机的仿真。</p>
 <h3 id="JVM结构"><a href="#JVM结构" class="headerlink" title="JVM结构"></a>JVM结构</h3><p><img src="http://i.imgur.com/Z7r0Cbb.png" alt=""><br>-</p>
 <ol>
 <li><strong>类加载子系统：</strong>负责从文件系统或者网络加载class信息，加载的信息存放在一款称之为方法区的内存空间。</li>
@@ -342,171 +345,72 @@
 <h4 id="java栈"><a href="#java栈" class="headerlink" title="java栈"></a>java栈</h4><p>java栈是一个线程私有的内存空间，一个栈一般由三个部分组成：局部变量表，操作数栈和帧数据区。<br><strong>局部变量表：</strong>用于报错函数的参数及局部变量。<br><strong>操作数栈：</strong>主要保存计算过程的中间结果，同时作为计算过程中变量临时的存储空间。<br><strong>帧数据区：</strong>除局部变量表和操作数栈，栈还需要一些数据来支持常量池的解析，这里<strong>帧数据区保存着访问常量池的指针</strong>，方便程序访问常量池。另外，当函数返回或者出现异常时，虚拟机必须有一个<strong>异常处理表，方便发送异常的时候找到异常的代码</strong>，因此异常处理表也是帧数据区的一部分。<br><img src="http://i.imgur.com/aZe540b.png" alt=""></p>
 <h4 id="java方法区"><a href="#java方法区" class="headerlink" title="java方法区"></a>java方法区</h4><p>java方法区和堆一样，方法区是一个所有线程共享的内存区域，它保存系统的类信息，比如类的字段、方法、常量池等。方法区的大小决定了系统可以保存多少类。如果系统定义太多的类，导致方法区移除。java虚拟机同样会抛出内存溢出错误。方法区可以理解为永久区（Perm）。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/25/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-25T11:11:48+08:00">
-                2017-04-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/JVM/" rel="tag"># JVM</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/25/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -514,6 +418,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -533,8 +441,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -587,6 +504,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM"><span class="nav-number">1.</span> <span class="nav-text">JVM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#java虚拟机的原理与概述"><span class="nav-number">1.1.</span> <span class="nav-text">java虚拟机的原理与概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JVM结构"><span class="nav-number">1.1.1.</span> <span class="nav-text">JVM结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆栈方法区的概念及联系"><span class="nav-number">1.1.2.</span> <span class="nav-text">堆栈方法区的概念及联系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#辨清java堆"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">辨清java堆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java栈"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">java栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#java方法区"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">java方法区</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -694,6 +627,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

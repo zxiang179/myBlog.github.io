@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Mind Palace
-subtitle: MyField
+title: MindPalace
+subtitle: Find What you want
 description: 知识带来自由
 author: Carl Hugo
-language: zh-CN
+language: 
 timezone:
 
 # URL

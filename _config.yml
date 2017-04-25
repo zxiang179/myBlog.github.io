@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
+title: Mind Palace
+subtitle: MyField
+description: 知识带来自由
+author: Carl Hugo
+language: zh-CN
 timezone:
 
 # URL
@@ -69,5 +69,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: ssh://git@github.com:zxiang179/myBlog.github.io.git
+  repo: git@github.com:zxiang179/myBlog.github.io.git
   branch: master

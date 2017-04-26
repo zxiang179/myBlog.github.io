@@ -71,3 +71,9 @@ deploy:
   type: git
   repo: git@github.com:zxiang179/myBlog.github.io.git
   branch: master
+  
+# add post views
+leancloud_visitors:
+  enable: true
+  app_id: 4O0yCTshO5mMmnLJj44xyUCb-gzGzoHsz
+  app_key: x7lOxotWFFxVI6p5kh7nrDxI

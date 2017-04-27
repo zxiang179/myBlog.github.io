@@ -78,9 +78,7 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/exturl.swig' %}
   
-  {% if theme.leancloud_visitors.enable %}
-  {% include '_scripts/lean-analytics.swig' %}
-  {% endif %}
+  
   
 </body>
 </html>

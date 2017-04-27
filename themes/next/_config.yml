@@ -273,8 +273,8 @@ baidu_analytics: c9cd255b280aa570956578700a3e5453
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: zxiangcomments
   count: true
 
 # Hypercomments

@@ -528,5 +528,5 @@ social_icons:
   enable: true
   # Icon Mappings
   GitHub: github
-  知乎: quory
+  知乎: quora
   csdn: heartbeat

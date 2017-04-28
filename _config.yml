@@ -73,4 +73,11 @@ deploy:
   branch: master
   
 # Swiftype Search Key
-swiftype_key: --5zT_BomqhuuUqzzNcX
+#swiftype_key: --5zT_BomqhuuUqzzNcX
+
+#Local Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

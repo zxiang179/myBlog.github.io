@@ -1,5 +1,5 @@
 ---
-title: My New Post
+title: JVM
 date: 2017-04-25 12:09:17
 tags: JVM
 categories: JAVA

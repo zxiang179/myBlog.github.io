@@ -72,3 +72,5 @@ deploy:
   repo: git@github.com:zxiang179/myBlog.github.io.git
   branch: master
   
+# Swiftype Search Key
+swiftype_key: --5zT_BomqhuuUqzzNcX

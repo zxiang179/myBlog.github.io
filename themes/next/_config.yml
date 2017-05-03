@@ -520,16 +520,18 @@ version: 5.1.0
 # Social links
 social:
   GitHub: https://github.com/zxiang179
-  quora: https://www.zhihu.com/people/zhu-xi-zhao-70
-  csdn: http://blog.csdn.net/zxiang248
+  Quora: https://www.zhihu.com/people/zhu-xi-zhao-70
+  CSDN: http://blog.csdn.net/zxiang248
+  LeetCode: https://leetcode.com/carl_hugo/
   
 # Social Icons
 social_icons:
   enable: true
   # Icon Mappings
   GitHub: github
-  quora: quora
-  csdn: heartbeat
+  Quora: quora
+  CSDN: heartbeat
+  LeetCode: code
 
 # 打赏  
 reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！

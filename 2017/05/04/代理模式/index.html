@@ -87,19 +87,19 @@
 
 
 
-<meta name="description" content="代理模式的定义：为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。   静态代理简单实例Subject.java1234public interface Subject &amp;#123;	public void Request();&amp;#125; RealSubject.java123456publ">
+<meta name="description" content="代理模式的定义：为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。">
 <meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="代理模式">
 <meta property="og:url" content="http://yoursite.com/2017/05/04/代理模式/index.html">
 <meta property="og:site_name" content="Mind Palace">
-<meta property="og:description" content="代理模式的定义：为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。   静态代理简单实例Subject.java1234public interface Subject &amp;#123;	public void Request();&amp;#125; RealSubject.java123456publ">
+<meta property="og:description" content="代理模式的定义：为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。">
 <meta property="og:image" content="http://img.blog.csdn.net/20170504073942555?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenhpYW5nMjQ4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170504085423896?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenhpYW5nMjQ4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-05-04T01:22:39.075Z">
+<meta property="og:updated_time" content="2017-05-04T02:18:10.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代理模式">
-<meta name="twitter:description" content="代理模式的定义：为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。   静态代理简单实例Subject.java1234public interface Subject &amp;#123;	public void Request();&amp;#125; RealSubject.java123456publ">
+<meta name="twitter:description" content="代理模式的定义：为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20170504073942555?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenhpYW5nMjQ4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
@@ -430,6 +430,7 @@
 <p><strong>代理模式的定义：</strong>为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。</p>
 </blockquote>
 <p><img src="http://img.blog.csdn.net/20170504073942555?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenhpYW5nMjQ4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<a id="more"></a>
 <h2 id="静态代理"><a href="#静态代理" class="headerlink" title="静态代理"></a>静态代理</h2><h3 id="简单实例"><a href="#简单实例" class="headerlink" title="简单实例"></a>简单实例</h3><p><strong>Subject.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public interface Subject &#123;</div><div class="line">	public void Request();</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p><strong>RealSubject.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public class RealSubject implements Subject&#123;</div><div class="line">	@Override</div><div class="line">	public void Request() &#123;</div><div class="line">		System.out.println(&quot;真实的请求&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p><strong>Proxy.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class Proxy implements Subject&#123;</div><div class="line">	RealSubject realSubject;</div><div class="line">	@Override</div><div class="line">	public void Request() &#123;</div><div class="line">		if(realSubject==null)&#123;</div><div class="line">			realSubject=new RealSubject();</div><div class="line">		&#125;</div><div class="line">		realSubject.Request();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>

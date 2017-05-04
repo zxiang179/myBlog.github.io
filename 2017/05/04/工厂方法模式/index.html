@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JVM," />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -87,17 +87,19 @@
 
 
 
-<meta name="description" content="虚拟机参数在虚拟机运行的过程中，如果可以跟踪系统的运行状态，那么对于问题的故障排除会有一定的帮助，为此，虚拟机提供了一些跟踪系统状态的参数，使用给定的参数执行java虚拟机，就可以在系统运行是打印相关日志，用于分析实际问题。我们进行虚拟机参数配置，其实主要就是围绕着堆栈方法区配置。 堆分配参数-XX:+PrintGC :使用这个参数，虚拟机启动后只要遇到GC就会打印日志。-XX:+UseSeria">
-<meta name="keywords" content="JVM">
+<meta name="description" content="工厂方法模式（Factory Method）：定义一个创建对象的接口，让子类决定实例化哪个类。工厂方法使一个类的实例化延迟到子类。   Operation.java123456789101112131415161718192021222324252627282930313233343536373839404142public interface Operation &amp;#123;	public d">
+<meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JVM参数配置">
-<meta property="og:url" content="http://yoursite.com/2017/05/03/JVM参数配置/index.html">
+<meta property="og:title" content="工厂方法模式">
+<meta property="og:url" content="http://yoursite.com/2017/05/04/工厂方法模式/index.html">
 <meta property="og:site_name" content="Mind Palace">
-<meta property="og:description" content="虚拟机参数在虚拟机运行的过程中，如果可以跟踪系统的运行状态，那么对于问题的故障排除会有一定的帮助，为此，虚拟机提供了一些跟踪系统状态的参数，使用给定的参数执行java虚拟机，就可以在系统运行是打印相关日志，用于分析实际问题。我们进行虚拟机参数配置，其实主要就是围绕着堆栈方法区配置。 堆分配参数-XX:+PrintGC :使用这个参数，虚拟机启动后只要遇到GC就会打印日志。-XX:+UseSeria">
-<meta property="og:updated_time" content="2017-05-03T13:27:23.493Z">
+<meta property="og:description" content="工厂方法模式（Factory Method）：定义一个创建对象的接口，让子类决定实例化哪个类。工厂方法使一个类的实例化延迟到子类。   Operation.java123456789101112131415161718192021222324252627282930313233343536373839404142public interface Operation &amp;#123;	public d">
+<meta property="og:image" content="http://i.imgur.com/vDVh64R.png">
+<meta property="og:updated_time" content="2017-05-04T00:13:23.462Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JVM参数配置">
-<meta name="twitter:description" content="虚拟机参数在虚拟机运行的过程中，如果可以跟踪系统的运行状态，那么对于问题的故障排除会有一定的帮助，为此，虚拟机提供了一些跟踪系统状态的参数，使用给定的参数执行java虚拟机，就可以在系统运行是打印相关日志，用于分析实际问题。我们进行虚拟机参数配置，其实主要就是围绕着堆栈方法区配置。 堆分配参数-XX:+PrintGC :使用这个参数，虚拟机启动后只要遇到GC就会打印日志。-XX:+UseSeria">
+<meta name="twitter:title" content="工厂方法模式">
+<meta name="twitter:description" content="工厂方法模式（Factory Method）：定义一个创建对象的接口，让子类决定实例化哪个类。工厂方法使一个类的实例化延迟到子类。   Operation.java123456789101112131415161718192021222324252627282930313233343536373839404142public interface Operation &amp;#123;	public d">
+<meta name="twitter:image" content="http://i.imgur.com/vDVh64R.png">
 
 
 
@@ -125,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/03/JVM参数配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/04/工厂方法模式/"/>
 
 
 
 
 
-  <title> JVM参数配置 | Mind Palace </title>
+  <title> 工厂方法模式 | Mind Palace </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -314,7 +316,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/03/JVM参数配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/04/工厂方法模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="祝翔">
@@ -335,7 +337,7 @@
             
             
               
-                JVM参数配置
+                工厂方法模式
               
             
           </h1>
@@ -350,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-03T00:00:00+08:00">
-                2017-05-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-04T00:00:00+08:00">
+                2017-05-04
               </time>
             
 
@@ -390,7 +392,7 @@
 
           
           
-             <span id="/2017/05/03/JVM参数配置/" class="leancloud_visitors" data-flag-title="JVM参数配置">
+             <span id="/2017/05/04/工厂方法模式/" class="leancloud_visitors" data-flag-title="工厂方法模式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -423,20 +425,30 @@
       
 
       
-        <h3 id="虚拟机参数"><a href="#虚拟机参数" class="headerlink" title="虚拟机参数"></a>虚拟机参数</h3><p>在虚拟机运行的过程中，如果可以跟踪系统的运行状态，那么对于问题的故障排除会有一定的帮助，为此，虚拟机提供了一些跟踪系统状态的参数，使用给定的参数执行java虚拟机，就可以在系统运行是打印相关日志，用于分析实际问题。我们进行虚拟机参数配置，其实主要就是围绕着<strong>堆栈方法区配置。</strong></p>
-<h4 id="堆分配参数"><a href="#堆分配参数" class="headerlink" title="堆分配参数"></a>堆分配参数</h4><p><strong>-XX:+PrintGC</strong> :使用这个参数，虚拟机启动后只要遇到GC就会打印日志。<br><strong>-XX:+UseSerialGC</strong> :配置串行回收器。<br><strong>-XX:+PrintGCDetails</strong>: 可以查看详细信息，包括各个区的情况。<br><strong>-Xms</strong>:设置java程序启动时的初始堆大小。<br><strong>-Xmx</strong>:设置java程序能获得最大堆的大小<br><strong>-Xmx20m -Xms5m -XX:+PrintCommandLineFlags</strong>:可以将隐式或显示传给虚拟机的参数输出。<br><strong>总结：</strong>在实际工作中，我们可以直接将<strong>初始堆的大小和最大堆大小设置相等</strong>，这样的好处是可以减少运行时的垃圾回收次数，从而提高性能。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">public class Test01 &#123;</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		</div><div class="line">		//-XX:+PrintGC -Xms5m -Xmx20m -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintCommandLineFlags</div><div class="line">		</div><div class="line">		//1:</div><div class="line">		//-XX:+PrintGC -Xms5m -Xmx20m -XX:+UseSerialGC -XX:+PrintGCDetails</div><div class="line">		</div><div class="line">		//查看GC信息</div><div class="line">		System.out.println(&quot;max memory:&quot;+Runtime.getRuntime().maxMemory());</div><div class="line">		System.out.println(&quot;free memory:&quot;+Runtime.getRuntime().freeMemory());</div><div class="line">		System.out.println(&quot;total memory:&quot;+Runtime.getRuntime().totalMemory());</div><div class="line">		</div><div class="line">		byte[] b1 = new byte[1*1024*1024];</div><div class="line">		System.out.println(&quot;分配了1M&quot;);</div><div class="line">		System.out.println(&quot;max memory:&quot;+Runtime.getRuntime().maxMemory());</div><div class="line">		System.out.println(&quot;free memory:&quot;+Runtime.getRuntime().freeMemory());</div><div class="line">		System.out.println(&quot;total memory:&quot;+Runtime.getRuntime().totalMemory());</div><div class="line">		</div><div class="line">		byte[] b2 = new byte[4*1024*1024];</div><div class="line">		System.out.println(&quot;分配了4M&quot;);</div><div class="line">		System.out.println(&quot;max memory:&quot;+Runtime.getRuntime().maxMemory());</div><div class="line">		System.out.println(&quot;free memory:&quot;+Runtime.getRuntime().freeMemory());</div><div class="line">		System.out.println(&quot;total memory:&quot;+Runtime.getRuntime().totalMemory());</div><div class="line">		</div><div class="line">		int a = 0x00000000fee10000;</div><div class="line">		int b = 0x00000000fec00000;</div><div class="line">		System.out.println(&quot;结果为1920k，但实际结果：&quot;+(a-b)/1024);</div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="堆分配参数（二）"><a href="#堆分配参数（二）" class="headerlink" title="堆分配参数（二）"></a>堆分配参数（二）</h4><p><strong>-Xmn</strong>:可以设置新生代的大小，设置一个比较大的新生代会减少老年代的大小，这个参数对系统性能以及GC行为有很大的影响，新生代大小一般会设置整个堆空间的1/3到1/4左右。<br><strong>-XX:SurvivorRatio</strong>:用来设置新生代中eden空间和from/to空间的比例。含义：-XX:SurvivorRatio=eden/from=eden/to<br>总结：不同的堆分布情况，对系统的执行会产生一定的影响，在实际工作中，应该根据系统的特点做出合理的配置，基本策略：尽可能的将对象预留在新生代，减少老年代的GC次数。<br>除了可以设置新生代的绝对大小(-Xmn),还可以使用(-XX:NewRation)设置新生代和老年代的比例：-XX:newRatio=老年代/新生代</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">public class Test02 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//第一次配置                                         eden 2 =from 1+ to 1</div><div class="line">		//-Xms20m -Xmx20m -Xmn1m -XX:SurvivorRatio=2 -XX:+PrintGCDetails -XX:+UseSerialGC</div><div class="line">		</div><div class="line">		//第二次配置</div><div class="line">		//-Xms20m -Xmx20m -Xmn7m -XX:SurvivorRatio=2 -XX:+PrintGCDetails -XX:+UseSerialGC</div><div class="line">		</div><div class="line">		//第三次配置</div><div class="line">		//-XX:NewRatio=老年代/新生代</div><div class="line">		//-Xms20m -Xmx20m -XX:NewRatio=2 -XX:+PrintGCDetails -XX:+UseSerialGC</div><div class="line">	    </div><div class="line">		byte[] b=null;</div><div class="line">		//连续向系统申请10m空间</div><div class="line">		for(int i=0;i&lt;10;i++)&#123;</div><div class="line">			b=new byte[1*1024*1024];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="堆溢出处理"><a href="#堆溢出处理" class="headerlink" title="堆溢出处理"></a>堆溢出处理</h4><p>在java程序运行的过程中，如果堆空间不足，则会抛出内存溢出的错误(Out Of Memory),一旦这类问题发生在生产环境，可能引起严重的业务中断，java虚拟机提供了-XX:+HeapDumpOnOutOfMemoryError,使用该参数可以在内存溢出时导出整个堆信息，与之配合的还有参数，-XX:HeapDumpPath,可以设置导出堆的路径。<br>内存分析工具：Memory Analyzer 1.5.0</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public class Test3 &#123;</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//-Xms2m -Xmx2m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=e:/Test03.dump</div><div class="line">		//堆内存溢出</div><div class="line">		Vector vector = new Vector();</div><div class="line">		for(int i=0;i&lt;5;i++)&#123;</div><div class="line">			vector.add(new Byte[1*1024*1024]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="栈配置"><a href="#栈配置" class="headerlink" title="栈配置"></a>栈配置</h3><p>Java虚拟机提供了参数-Xss来指定线程的最大栈空间，整个参数也直接决定了函数可调用的最大深度。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class Test4 &#123;</div><div class="line">	</div><div class="line">	//-Xss1m</div><div class="line">	//-Xss5m</div><div class="line">	</div><div class="line">	//栈调用深度</div><div class="line">	private static int count;</div><div class="line">	</div><div class="line">	public static void recursion()&#123;</div><div class="line">		count++;</div><div class="line">		recursion();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		try &#123;</div><div class="line">			recursion();</div><div class="line">		&#125; catch (Throwable e) &#123;</div><div class="line">            System.out.println(&quot;调用最大深处：&quot;+count);</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h3><p>和java堆一样，方法区是一块所有线程共享的内存区域，它用于保存系统的类信息，方法区(永久区)可以保存多少信息可以对其进行配置，在默认情况下，-XX:MaxPermSize为64MB，如果系统运行时产生大量的类，就需要设置一个相对合适的方法区，以免出现永久区内存溢出的问题。<br>-XX:PermSize=64M -XX:MaxPermSize=64M</p>
-<h3 id="直接内存配置"><a href="#直接内存配置" class="headerlink" title="直接内存配置"></a>直接内存配置</h3><p>直接内存也是java程序中非常重要的组成部分，特别是广泛用在NIO中，直接内存跳过了java堆，使java程序可以直接访问原生堆空间，因此在一定的程度上加快了内存空间的访问速度。但是说直接内存一定就可以提高内存访问速度也不见得，具体问题具体分析。<br>相关配置参数：-XX:MaxDirectMemorySize,如果不设置默认值为最大空间，即-Xmx。直接内存使用达到上限时，就会触发垃圾回收，如果不能有效的释放空间，也会引起系统的OOM。</p>
-<h3 id="Client和Server虚拟机的工作模式"><a href="#Client和Server虚拟机的工作模式" class="headerlink" title="Client和Server虚拟机的工作模式"></a>Client和Server虚拟机的工作模式</h3><p>java虚拟机支持Client和Server模式，使用-client可以指定使用Client模式，使用-server可以使用Server模式。（jdk1.7及以后不需要考虑）<br>区别：client模式比server模式启动要快，但长期运行server模式性能远远好于Client模式。</p>
-<p>JVM博客：<a href="http://www.cnblogs.com/redcreen/tag/jvm/" target="_blank" rel="external">http://www.cnblogs.com/redcreen/tag/jvm/</a></p>
-<p>源码：<a href="https://github.com/zxiang179/JVM" target="_blank" rel="external">https://github.com/zxiang179/JVM</a></p>
+        <blockquote>
+<p><strong>工厂方法模式（Factory Method）：</strong>定义一个创建对象的接口，让子类决定实例化哪个类。工厂方法使一个类的实例化延迟到子类。</p>
+</blockquote>
+<p><img src="http://i.imgur.com/vDVh64R.png" alt=""></p>
+<p><strong>Operation.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">public interface Operation &#123;</div><div class="line">	public double getResult(double number1,double number2) throws Exception;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class OperationAdd implements Operation&#123;</div><div class="line">	@Override</div><div class="line">	public double getResult(double number1, double number2) &#123;</div><div class="line">		double result=0;</div><div class="line">		return result=number1+number2;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class OperationSub implements Operation&#123;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public double getResult(double number1, double number2) &#123;</div><div class="line">		double result=0;</div><div class="line">		return result=number1-number2;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class OperationMul implements Operation&#123;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public double getResult(double number1, double number2) &#123;</div><div class="line">		double result=0;</div><div class="line">		return result=number1*number2;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class OperationDiv implements Operation&#123;</div><div class="line">	@Override</div><div class="line">	public double getResult(double number1, double number2) throws Exception &#123;</div><div class="line">		double result=0;</div><div class="line">		if(number2==0)&#123;</div><div class="line">			throw new Exception(&quot;除数不能为0&quot;);</div><div class="line">		&#125;</div><div class="line">			result=number1/number2;</div><div class="line">		return result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>先构造一个工厂接口，然后加减乘除各自建造一个具体工厂去实现这个接口</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">public interface IFactory &#123;</div><div class="line">	Operation createOperation();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class AddFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public Operation createOperation() &#123;</div><div class="line">		return new OperationAdd();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class SubFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public Operation createOperation() &#123;</div><div class="line">		return new OperationSub();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class MulFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public Operation createOperation() &#123;</div><div class="line">		return new OperationMul();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class DivFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public Operation createOperation() &#123;</div><div class="line">		return new OperationDiv();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Test.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">package zx.factorymethod.test1;</div><div class="line"></div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) throws Exception &#123;</div><div class="line">		AddFactory addFactory = new AddFactory();</div><div class="line">		Operation operationAdd = addFactory.createOperation();</div><div class="line">		System.out.println(operationAdd.getResult(1, 1));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>工厂方法模式实现时，客户端需要决定实例化哪个工厂来实现运算类。也就是说，工厂方法模式把简单工厂的内部逻辑判断移到客户端代码来进行。如果想要加功能，本来是改工厂，现在是修改客户端。</p>
+<h2 id="具体实例-雷锋-志愿者工厂"><a href="#具体实例-雷锋-志愿者工厂" class="headerlink" title="具体实例(雷锋/志愿者工厂)"></a>具体实例(雷锋/志愿者工厂)</h2><h3 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h3><blockquote>
+<p><strong>简单工厂：根据传入的参数返回特定的对象。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class LeiFeng &#123;</div><div class="line">	public void Sweep()&#123;</div><div class="line">		System.out.println(&quot;扫地&quot;);</div><div class="line">	&#125;</div><div class="line">	public void Wash()&#123;</div><div class="line">		System.out.println(&quot;洗衣&quot;);</div><div class="line">	&#125;</div><div class="line">	public void BuyRice()&#123;</div><div class="line">		System.out.println(&quot;买米&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class UnderGraduate extends LeiFeng&#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Volunteer extends LeiFeng&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h3><blockquote>
+<p><strong>工厂方法：根据创建的工厂类型，返回特定的对象</strong></p>
+</blockquote>
+<p>雷锋工厂<br><strong>IFactory.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public interface IFactory &#123;</div><div class="line">	LeiFeng createLeiFeng();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class UnderGraduateFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public LeiFeng createLeiFeng() &#123;</div><div class="line">		return new UnderGraduate();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class VolunteerFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public LeiFeng createLeiFeng() &#123;</div><div class="line">		return new Volunteer();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><em>IFactory为工厂接口，UnderGraduateFactory和VolunteerFactory为实现这个接口的具体工厂的实现。</em></p>
+<p>工厂方法模式的调用<br><strong>Test.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		IFactory underGraduateFactory = new UnderGraduateFactory();</div><div class="line">		LeiFeng leiFeng = underGraduateFactory.createLeiFeng();</div><div class="line">		leiFeng.Sweep();</div><div class="line">		leiFeng.BuyRice();</div><div class="line">		leiFeng.Wash();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p> <strong>工厂方法模式的使用场合</strong></p>
+<ul>
+<li>客户端不知道它要创建的具体是哪一个子类。</li>
+<li>一个类想要由自己的子类来定义某对象的创建过程。</li>
+<li>类将创建某对象的职责代理给一些帮助子类中的一个，并且你想要将哪-一个子类作为代理的信息进行局部化。</li>
+</ul>
+<p>源码：<a href="https://github.com/zxiang179/DesignPattern" target="_blank" rel="external">https://github.com/zxiang179/DesignPattern</a></p>
 
       
     </div>
@@ -487,7 +499,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JVM/" rel="tag"># JVM</a>
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
           
         </div>
       
@@ -500,8 +512,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/03/垃圾回收和TomcatGC参数配置/" rel="next" title="垃圾回收/TomcatGC参数配置">
-                <i class="fa fa-chevron-left"></i> 垃圾回收/TomcatGC参数配置
+              <a href="/2017/05/04/简单工厂模式/" rel="next" title="简单工厂模式">
+                <i class="fa fa-chevron-left"></i> 简单工厂模式
               </a>
             
           </div>
@@ -510,8 +522,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/25/JVM/" rel="prev" title="JVM">
-                JVM <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/04/代理模式/" rel="prev" title="代理模式">
+                代理模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -681,7 +693,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟机参数"><span class="nav-number">1.</span> <span class="nav-text">虚拟机参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#堆分配参数"><span class="nav-number">1.1.</span> <span class="nav-text">堆分配参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆分配参数（二）"><span class="nav-number">1.2.</span> <span class="nav-text">堆分配参数（二）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆溢出处理"><span class="nav-number">1.3.</span> <span class="nav-text">堆溢出处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈配置"><span class="nav-number">2.</span> <span class="nav-text">栈配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法区"><span class="nav-number">3.</span> <span class="nav-text">方法区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直接内存配置"><span class="nav-number">4.</span> <span class="nav-text">直接内存配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Client和Server虚拟机的工作模式"><span class="nav-number">5.</span> <span class="nav-text">Client和Server虚拟机的工作模式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实例-雷锋-志愿者工厂"><span class="nav-number">1.</span> <span class="nav-text">具体实例(雷锋/志愿者工厂)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单工厂"><span class="nav-number">1.1.</span> <span class="nav-text">简单工厂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂方法"><span class="nav-number">1.2.</span> <span class="nav-text">工厂方法</span></a></li></ol></li></ol></div>
             
 
           </div>

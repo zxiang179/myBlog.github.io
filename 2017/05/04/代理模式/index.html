@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JVM," />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -87,17 +87,20 @@
 
 
 
-<meta name="description" content="虚拟机参数在虚拟机运行的过程中，如果可以跟踪系统的运行状态，那么对于问题的故障排除会有一定的帮助，为此，虚拟机提供了一些跟踪系统状态的参数，使用给定的参数执行java虚拟机，就可以在系统运行是打印相关日志，用于分析实际问题。我们进行虚拟机参数配置，其实主要就是围绕着堆栈方法区配置。 堆分配参数-XX:+PrintGC :使用这个参数，虚拟机启动后只要遇到GC就会打印日志。-XX:+UseSeria">
-<meta name="keywords" content="JVM">
+<meta name="description" content="代理模式的定义：为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。   静态代理简单实例Subject.java1234public interface Subject &amp;#123;	public void Request();&amp;#125; RealSubject.java123456publ">
+<meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JVM参数配置">
-<meta property="og:url" content="http://yoursite.com/2017/05/03/JVM参数配置/index.html">
+<meta property="og:title" content="代理模式">
+<meta property="og:url" content="http://yoursite.com/2017/05/04/代理模式/index.html">
 <meta property="og:site_name" content="Mind Palace">
-<meta property="og:description" content="虚拟机参数在虚拟机运行的过程中，如果可以跟踪系统的运行状态，那么对于问题的故障排除会有一定的帮助，为此，虚拟机提供了一些跟踪系统状态的参数，使用给定的参数执行java虚拟机，就可以在系统运行是打印相关日志，用于分析实际问题。我们进行虚拟机参数配置，其实主要就是围绕着堆栈方法区配置。 堆分配参数-XX:+PrintGC :使用这个参数，虚拟机启动后只要遇到GC就会打印日志。-XX:+UseSeria">
-<meta property="og:updated_time" content="2017-05-03T13:27:23.493Z">
+<meta property="og:description" content="代理模式的定义：为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。   静态代理简单实例Subject.java1234public interface Subject &amp;#123;	public void Request();&amp;#125; RealSubject.java123456publ">
+<meta property="og:image" content="http://img.blog.csdn.net/20170504073942555?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenhpYW5nMjQ4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170504085423896?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenhpYW5nMjQ4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-05-04T01:22:39.075Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JVM参数配置">
-<meta name="twitter:description" content="虚拟机参数在虚拟机运行的过程中，如果可以跟踪系统的运行状态，那么对于问题的故障排除会有一定的帮助，为此，虚拟机提供了一些跟踪系统状态的参数，使用给定的参数执行java虚拟机，就可以在系统运行是打印相关日志，用于分析实际问题。我们进行虚拟机参数配置，其实主要就是围绕着堆栈方法区配置。 堆分配参数-XX:+PrintGC :使用这个参数，虚拟机启动后只要遇到GC就会打印日志。-XX:+UseSeria">
+<meta name="twitter:title" content="代理模式">
+<meta name="twitter:description" content="代理模式的定义：为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。   静态代理简单实例Subject.java1234public interface Subject &amp;#123;	public void Request();&amp;#125; RealSubject.java123456publ">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170504073942555?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenhpYW5nMjQ4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
 
@@ -125,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/03/JVM参数配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/04/代理模式/"/>
 
 
 
 
 
-  <title> JVM参数配置 | Mind Palace </title>
+  <title> 代理模式 | Mind Palace </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -314,7 +317,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/03/JVM参数配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/04/代理模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="祝翔">
@@ -335,7 +338,7 @@
             
             
               
-                JVM参数配置
+                代理模式
               
             
           </h1>
@@ -350,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-03T00:00:00+08:00">
-                2017-05-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-04T00:00:00+08:00">
+                2017-05-04
               </time>
             
 
@@ -390,7 +393,7 @@
 
           
           
-             <span id="/2017/05/03/JVM参数配置/" class="leancloud_visitors" data-flag-title="JVM参数配置">
+             <span id="/2017/05/04/代理模式/" class="leancloud_visitors" data-flag-title="代理模式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -423,20 +426,35 @@
       
 
       
-        <h3 id="虚拟机参数"><a href="#虚拟机参数" class="headerlink" title="虚拟机参数"></a>虚拟机参数</h3><p>在虚拟机运行的过程中，如果可以跟踪系统的运行状态，那么对于问题的故障排除会有一定的帮助，为此，虚拟机提供了一些跟踪系统状态的参数，使用给定的参数执行java虚拟机，就可以在系统运行是打印相关日志，用于分析实际问题。我们进行虚拟机参数配置，其实主要就是围绕着<strong>堆栈方法区配置。</strong></p>
-<h4 id="堆分配参数"><a href="#堆分配参数" class="headerlink" title="堆分配参数"></a>堆分配参数</h4><p><strong>-XX:+PrintGC</strong> :使用这个参数，虚拟机启动后只要遇到GC就会打印日志。<br><strong>-XX:+UseSerialGC</strong> :配置串行回收器。<br><strong>-XX:+PrintGCDetails</strong>: 可以查看详细信息，包括各个区的情况。<br><strong>-Xms</strong>:设置java程序启动时的初始堆大小。<br><strong>-Xmx</strong>:设置java程序能获得最大堆的大小<br><strong>-Xmx20m -Xms5m -XX:+PrintCommandLineFlags</strong>:可以将隐式或显示传给虚拟机的参数输出。<br><strong>总结：</strong>在实际工作中，我们可以直接将<strong>初始堆的大小和最大堆大小设置相等</strong>，这样的好处是可以减少运行时的垃圾回收次数，从而提高性能。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">public class Test01 &#123;</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		</div><div class="line">		//-XX:+PrintGC -Xms5m -Xmx20m -XX:+UseSerialGC -XX:+PrintGCDetails -XX:+PrintCommandLineFlags</div><div class="line">		</div><div class="line">		//1:</div><div class="line">		//-XX:+PrintGC -Xms5m -Xmx20m -XX:+UseSerialGC -XX:+PrintGCDetails</div><div class="line">		</div><div class="line">		//查看GC信息</div><div class="line">		System.out.println(&quot;max memory:&quot;+Runtime.getRuntime().maxMemory());</div><div class="line">		System.out.println(&quot;free memory:&quot;+Runtime.getRuntime().freeMemory());</div><div class="line">		System.out.println(&quot;total memory:&quot;+Runtime.getRuntime().totalMemory());</div><div class="line">		</div><div class="line">		byte[] b1 = new byte[1*1024*1024];</div><div class="line">		System.out.println(&quot;分配了1M&quot;);</div><div class="line">		System.out.println(&quot;max memory:&quot;+Runtime.getRuntime().maxMemory());</div><div class="line">		System.out.println(&quot;free memory:&quot;+Runtime.getRuntime().freeMemory());</div><div class="line">		System.out.println(&quot;total memory:&quot;+Runtime.getRuntime().totalMemory());</div><div class="line">		</div><div class="line">		byte[] b2 = new byte[4*1024*1024];</div><div class="line">		System.out.println(&quot;分配了4M&quot;);</div><div class="line">		System.out.println(&quot;max memory:&quot;+Runtime.getRuntime().maxMemory());</div><div class="line">		System.out.println(&quot;free memory:&quot;+Runtime.getRuntime().freeMemory());</div><div class="line">		System.out.println(&quot;total memory:&quot;+Runtime.getRuntime().totalMemory());</div><div class="line">		</div><div class="line">		int a = 0x00000000fee10000;</div><div class="line">		int b = 0x00000000fec00000;</div><div class="line">		System.out.println(&quot;结果为1920k，但实际结果：&quot;+(a-b)/1024);</div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="堆分配参数（二）"><a href="#堆分配参数（二）" class="headerlink" title="堆分配参数（二）"></a>堆分配参数（二）</h4><p><strong>-Xmn</strong>:可以设置新生代的大小，设置一个比较大的新生代会减少老年代的大小，这个参数对系统性能以及GC行为有很大的影响，新生代大小一般会设置整个堆空间的1/3到1/4左右。<br><strong>-XX:SurvivorRatio</strong>:用来设置新生代中eden空间和from/to空间的比例。含义：-XX:SurvivorRatio=eden/from=eden/to<br>总结：不同的堆分布情况，对系统的执行会产生一定的影响，在实际工作中，应该根据系统的特点做出合理的配置，基本策略：尽可能的将对象预留在新生代，减少老年代的GC次数。<br>除了可以设置新生代的绝对大小(-Xmn),还可以使用(-XX:NewRation)设置新生代和老年代的比例：-XX:newRatio=老年代/新生代</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">public class Test02 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//第一次配置                                         eden 2 =from 1+ to 1</div><div class="line">		//-Xms20m -Xmx20m -Xmn1m -XX:SurvivorRatio=2 -XX:+PrintGCDetails -XX:+UseSerialGC</div><div class="line">		</div><div class="line">		//第二次配置</div><div class="line">		//-Xms20m -Xmx20m -Xmn7m -XX:SurvivorRatio=2 -XX:+PrintGCDetails -XX:+UseSerialGC</div><div class="line">		</div><div class="line">		//第三次配置</div><div class="line">		//-XX:NewRatio=老年代/新生代</div><div class="line">		//-Xms20m -Xmx20m -XX:NewRatio=2 -XX:+PrintGCDetails -XX:+UseSerialGC</div><div class="line">	    </div><div class="line">		byte[] b=null;</div><div class="line">		//连续向系统申请10m空间</div><div class="line">		for(int i=0;i&lt;10;i++)&#123;</div><div class="line">			b=new byte[1*1024*1024];</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="堆溢出处理"><a href="#堆溢出处理" class="headerlink" title="堆溢出处理"></a>堆溢出处理</h4><p>在java程序运行的过程中，如果堆空间不足，则会抛出内存溢出的错误(Out Of Memory),一旦这类问题发生在生产环境，可能引起严重的业务中断，java虚拟机提供了-XX:+HeapDumpOnOutOfMemoryError,使用该参数可以在内存溢出时导出整个堆信息，与之配合的还有参数，-XX:HeapDumpPath,可以设置导出堆的路径。<br>内存分析工具：Memory Analyzer 1.5.0</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">public class Test3 &#123;</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//-Xms2m -Xmx2m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=e:/Test03.dump</div><div class="line">		//堆内存溢出</div><div class="line">		Vector vector = new Vector();</div><div class="line">		for(int i=0;i&lt;5;i++)&#123;</div><div class="line">			vector.add(new Byte[1*1024*1024]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="栈配置"><a href="#栈配置" class="headerlink" title="栈配置"></a>栈配置</h3><p>Java虚拟机提供了参数-Xss来指定线程的最大栈空间，整个参数也直接决定了函数可调用的最大深度。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class Test4 &#123;</div><div class="line">	</div><div class="line">	//-Xss1m</div><div class="line">	//-Xss5m</div><div class="line">	</div><div class="line">	//栈调用深度</div><div class="line">	private static int count;</div><div class="line">	</div><div class="line">	public static void recursion()&#123;</div><div class="line">		count++;</div><div class="line">		recursion();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		try &#123;</div><div class="line">			recursion();</div><div class="line">		&#125; catch (Throwable e) &#123;</div><div class="line">            System.out.println(&quot;调用最大深处：&quot;+count);</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h3><p>和java堆一样，方法区是一块所有线程共享的内存区域，它用于保存系统的类信息，方法区(永久区)可以保存多少信息可以对其进行配置，在默认情况下，-XX:MaxPermSize为64MB，如果系统运行时产生大量的类，就需要设置一个相对合适的方法区，以免出现永久区内存溢出的问题。<br>-XX:PermSize=64M -XX:MaxPermSize=64M</p>
-<h3 id="直接内存配置"><a href="#直接内存配置" class="headerlink" title="直接内存配置"></a>直接内存配置</h3><p>直接内存也是java程序中非常重要的组成部分，特别是广泛用在NIO中，直接内存跳过了java堆，使java程序可以直接访问原生堆空间，因此在一定的程度上加快了内存空间的访问速度。但是说直接内存一定就可以提高内存访问速度也不见得，具体问题具体分析。<br>相关配置参数：-XX:MaxDirectMemorySize,如果不设置默认值为最大空间，即-Xmx。直接内存使用达到上限时，就会触发垃圾回收，如果不能有效的释放空间，也会引起系统的OOM。</p>
-<h3 id="Client和Server虚拟机的工作模式"><a href="#Client和Server虚拟机的工作模式" class="headerlink" title="Client和Server虚拟机的工作模式"></a>Client和Server虚拟机的工作模式</h3><p>java虚拟机支持Client和Server模式，使用-client可以指定使用Client模式，使用-server可以使用Server模式。（jdk1.7及以后不需要考虑）<br>区别：client模式比server模式启动要快，但长期运行server模式性能远远好于Client模式。</p>
-<p>JVM博客：<a href="http://www.cnblogs.com/redcreen/tag/jvm/" target="_blank" rel="external">http://www.cnblogs.com/redcreen/tag/jvm/</a></p>
-<p>源码：<a href="https://github.com/zxiang179/JVM" target="_blank" rel="external">https://github.com/zxiang179/JVM</a></p>
+        <blockquote>
+<p><strong>代理模式的定义：</strong>为其他对象提供一种代理以控制对这个对象的访问。在某些情况下，一个对象不适合或者不能直接引用另一个对象，而代理对象可以在客户端和目标对象之间起到中介的作用。</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20170504073942555?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenhpYW5nMjQ4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="静态代理"><a href="#静态代理" class="headerlink" title="静态代理"></a>静态代理</h2><h3 id="简单实例"><a href="#简单实例" class="headerlink" title="简单实例"></a>简单实例</h3><p><strong>Subject.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">public interface Subject &#123;</div><div class="line">	public void Request();</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>RealSubject.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public class RealSubject implements Subject&#123;</div><div class="line">	@Override</div><div class="line">	public void Request() &#123;</div><div class="line">		System.out.println(&quot;真实的请求&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Proxy.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class Proxy implements Subject&#123;</div><div class="line">	RealSubject realSubject;</div><div class="line">	@Override</div><div class="line">	public void Request() &#123;</div><div class="line">		if(realSubject==null)&#123;</div><div class="line">			realSubject=new RealSubject();</div><div class="line">		&#125;</div><div class="line">		realSubject.Request();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><em>通过代理实现realSubject的发送请求</em><br><strong>Test.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Proxy proxy = new Proxy();</div><div class="line">		proxy.Request();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="具体实例-追求者通过代理赠送礼物"><a href="#具体实例-追求者通过代理赠送礼物" class="headerlink" title="具体实例(追求者通过代理赠送礼物)"></a>具体实例(追求者通过代理赠送礼物)</h3><p><strong>SchoolGirl.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class SchoolGirl &#123;</div><div class="line">	private String name;</div><div class="line">	public String getName() &#123;</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line">	public void setName(String name) &#123;</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>GiveGift.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public interface GiveGift &#123;</div><div class="line">	void giveDolls();</div><div class="line">	void giveFlowers();</div><div class="line">	void giveChocolate();</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Pursuit.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">public class Pursuit implements GiveGift&#123;</div><div class="line">	</div><div class="line">	public SchoolGirl mm;</div><div class="line">	public Pursuit(SchoolGirl mm)&#123;</div><div class="line">		this.mm=mm;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void giveDolls() &#123;</div><div class="line">		System.out.println(mm.getName()+&quot;送你洋娃娃&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void giveFlowers() &#123;</div><div class="line">		System.out.println(mm.getName()+&quot;送你鲜花&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void giveChocolate() &#123;</div><div class="line">		System.out.println(mm.getName()+&quot;送你巧克力&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Proxy.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class Proxy implements GiveGift&#123;</div><div class="line">	</div><div class="line">	Pursuit gg;</div><div class="line">	public Proxy(SchoolGirl mm)&#123;</div><div class="line">		gg=new Pursuit(mm);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void giveDolls() &#123;</div><div class="line">		gg.giveDolls();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void giveFlowers() &#123;</div><div class="line">		gg.giveFlowers();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void giveChocolate() &#123;</div><div class="line">		gg.giveChocolate();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><em>当Pursuit对象无法之间完成giveDolls()、giveFlowers()、giveChocolate()方法时，通过创建代理对象，由代理对象创建new pursuit(),并通过pursuit对象实现方法的调用。</em></p>
+<p><strong>分析：通过这里例子以及扩展我们来看一下静态代理模式的缺点吧：</strong></p>
+<ul>
+<li>如果出现上面的需求，那么势必会出现类爆炸的结果；</li>
+<li>当然捕捉方法执行时间的代码都一样，我们每个方法都写，每个类都写，这也是代码的重复，没有达到代码复用的效果，这也完全违背了面向对象设计的原则。</li>
+</ul>
+<p><strong>思考：防止出现类爆炸，使代码能够得到复用。我们能不能用一个代理类，来代理所有需要的类。</strong></p>
+<h2 id="动态代理模式"><a href="#动态代理模式" class="headerlink" title="动态代理模式"></a>动态代理模式</h2><blockquote>
+<p><strong>通过反射机制，利用JDK提供的Proxy类，在程序运行的时候在内存中根据目标对象来创建代理对象，避免了类爆炸的出现。</strong></p>
+</blockquote>
+<p>使用代理模式必须要让代理类和目标类实现相同的接口，客户端通过代理类来调用目标方法，代理类会将所有的方法调用分派到目标对象上反射执行，还可以在分派过程中添加”前置通知”和后置处理（如在调用目标方法前校验权限，在调用完目标方法后打印日志等）等功能。</p>
+<p><img src="http://img.blog.csdn.net/20170504085423896?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvenhpYW5nMjQ4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><strong>代理类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 此类需要实现InvocationHandler接口</div><div class="line"> * 调用处理器，当代理对象调用代理方法的时候，注册在调用处理器中的invoke方法会自动调用</div><div class="line"> * @author Carl_Hugo</div><div class="line"> * @date 2017年5月4日</div><div class="line"> */</div><div class="line">public class MyInvocationHandler implements InvocationHandler&#123;</div><div class="line"></div><div class="line">	//目标对象，通过反射机制获得</div><div class="line">	private Object target;</div><div class="line">	//构造方法</div><div class="line">	public MyInvocationHandler(Object target) &#123;</div><div class="line">		super();</div><div class="line">		this.target=target;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/**</div><div class="line">	 * 执行目标对象的方法</div><div class="line">	 * 参数：Object proxy 代理对象的引用，proxy变量中保存代理对象的内存地址</div><div class="line">	 *      Method method 目标对象的目标方法</div><div class="line">	 *      Object[] args:目标对象的目标方法执行的时候需要实参</div><div class="line">	 */</div><div class="line">	@Override</div><div class="line">	public Object invoke(Object proxy, Method method, Object[] args)</div><div class="line">			throws Throwable &#123;</div><div class="line">		//开始时间</div><div class="line">		long begin = System.currentTimeMillis();</div><div class="line">		System.out.println(&quot;==============开始==============&quot;);</div><div class="line">		//执行目标对象中的方法</div><div class="line">		Object retValue = method.invoke(target, args);</div><div class="line">		//结束时间</div><div class="line">		long end = System.currentTimeMillis();</div><div class="line">		//计算时间</div><div class="line">		System.out.println(&quot;==============结束==============&quot;);</div><div class="line">		System.out.println(&quot;耗费时长：&quot;+(end-begin)+&quot;ms&quot;);</div><div class="line">		return retValue;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/**</div><div class="line">	 * 获取目标对象的代理对象</div><div class="line">	 * @return</div><div class="line">	 */</div><div class="line">	public Object getProxy()&#123;</div><div class="line">		return Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(),</div><div class="line">				target.getClass().getInterfaces(), this);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>测试类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 注意：JDK内置的动态代理Proxy只能代理接口</div><div class="line"> * (如果既想代理接口又想代理抽象类需要使用第三方组件：例如cglib)</div><div class="line"> * @author Carl_Hugo</div><div class="line"> * @date 2017年5月4日</div><div class="line"> */</div><div class="line">public class Test &#123;</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//实例化目标对象</div><div class="line">		UserService userService = new UserServiceImpl();</div><div class="line">		//实例化MyInvocationHandler</div><div class="line">		MyInvocationHandler invocationHandler = new MyInvocationHandler(userService);</div><div class="line">		//根据目标对象创建代理对象</div><div class="line">		UserService proxy = (UserService)invocationHandler.getProxy();</div><div class="line">		/*UserService proxy = (UserService)Proxy.newProxyInstance(UserService.class.getClassLoader(),</div><div class="line">				new Class[]&#123;UserService.class&#125;, invocationHandler);*/</div><div class="line">		//执行代理对象的方法</div><div class="line">        proxy.add();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>UserService类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">public interface UserService  &#123;</div><div class="line"></div><div class="line">	public abstract void add();</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>UserServiceImpl类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public class UserServiceImpl implements UserService&#123;</div><div class="line">	</div><div class="line">	@Override</div><div class="line">	public void add() &#123;</div><div class="line">		System.out.println(&quot;----------add-------------&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>源码：<a href="https://github.com/zxiang179/DesignPattern" target="_blank" rel="external">https://github.com/zxiang179/DesignPattern</a></p>
 
       
     </div>
@@ -487,7 +505,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JVM/" rel="tag"># JVM</a>
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
           
         </div>
       
@@ -500,8 +518,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/03/垃圾回收和TomcatGC参数配置/" rel="next" title="垃圾回收/TomcatGC参数配置">
-                <i class="fa fa-chevron-left"></i> 垃圾回收/TomcatGC参数配置
+              <a href="/2017/05/04/工厂方法模式/" rel="next" title="工厂方法模式">
+                <i class="fa fa-chevron-left"></i> 工厂方法模式
               </a>
             
           </div>
@@ -510,8 +528,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/25/JVM/" rel="prev" title="JVM">
-                JVM <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/03/垃圾回收和TomcatGC参数配置/" rel="prev" title="垃圾回收/TomcatGC参数配置">
+                垃圾回收/TomcatGC参数配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -681,7 +699,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟机参数"><span class="nav-number">1.</span> <span class="nav-text">虚拟机参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#堆分配参数"><span class="nav-number">1.1.</span> <span class="nav-text">堆分配参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆分配参数（二）"><span class="nav-number">1.2.</span> <span class="nav-text">堆分配参数（二）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆溢出处理"><span class="nav-number">1.3.</span> <span class="nav-text">堆溢出处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈配置"><span class="nav-number">2.</span> <span class="nav-text">栈配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法区"><span class="nav-number">3.</span> <span class="nav-text">方法区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直接内存配置"><span class="nav-number">4.</span> <span class="nav-text">直接内存配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Client和Server虚拟机的工作模式"><span class="nav-number">5.</span> <span class="nav-text">Client和Server虚拟机的工作模式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态代理"><span class="nav-number">1.</span> <span class="nav-text">静态代理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单实例"><span class="nav-number">1.1.</span> <span class="nav-text">简单实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体实例-追求者通过代理赠送礼物"><span class="nav-number">1.2.</span> <span class="nav-text">具体实例(追求者通过代理赠送礼物)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态代理模式"><span class="nav-number">2.</span> <span class="nav-text">动态代理模式</span></a></li></ol></div>
             
 
           </div>

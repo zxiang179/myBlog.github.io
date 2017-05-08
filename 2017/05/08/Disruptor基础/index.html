@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="设计模式," />
+  <meta name="keywords" content="并发编程," />
 
 
 
@@ -87,19 +87,20 @@
 
 
 
-<meta name="description" content="工厂方法模式（Factory Method）：定义一个创建对象的接口，让子类决定实例化哪个类。工厂方法使一个类的实例化延迟到子类。">
-<meta name="keywords" content="设计模式">
+<meta name="description" content="Disruptor Martin Fowler在自己网站上写了一篇LMAX架构的文章，在文章中他介绍了LMAX是一种新型零售金融交易平台，它能够以很低的延迟产生大量交易。这个系统是建立在JVM平台上，其核心是一个业务逻辑处理器，它能够在一个线程里每秒处理6百万订单。业务逻辑处理器完全是运行在内存中，使用事件源驱动方式。业务逻辑处理器的核心是Disruptor。  在Disruptor中，我们想实现">
+<meta name="keywords" content="并发编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="工厂方法模式">
-<meta property="og:url" content="http://yoursite.com/2017/05/04/工厂方法模式/index.html">
+<meta property="og:title" content="Disruptor基础">
+<meta property="og:url" content="http://yoursite.com/2017/05/08/Disruptor基础/index.html">
 <meta property="og:site_name" content="Mind Palace">
-<meta property="og:description" content="工厂方法模式（Factory Method）：定义一个创建对象的接口，让子类决定实例化哪个类。工厂方法使一个类的实例化延迟到子类。">
-<meta property="og:image" content="http://i.imgur.com/vDVh64R.png">
-<meta property="og:updated_time" content="2017-05-04T02:18:34.726Z">
+<meta property="og:description" content="Disruptor Martin Fowler在自己网站上写了一篇LMAX架构的文章，在文章中他介绍了LMAX是一种新型零售金融交易平台，它能够以很低的延迟产生大量交易。这个系统是建立在JVM平台上，其核心是一个业务逻辑处理器，它能够在一个线程里每秒处理6百万订单。业务逻辑处理器完全是运行在内存中，使用事件源驱动方式。业务逻辑处理器的核心是Disruptor。  在Disruptor中，我们想实现">
+<meta property="og:image" content="http://i.imgur.com/nqzyhjh.png">
+<meta property="og:image" content="http://i.imgur.com/nx2DiPG.png">
+<meta property="og:updated_time" content="2017-05-08T01:19:54.291Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="工厂方法模式">
-<meta name="twitter:description" content="工厂方法模式（Factory Method）：定义一个创建对象的接口，让子类决定实例化哪个类。工厂方法使一个类的实例化延迟到子类。">
-<meta name="twitter:image" content="http://i.imgur.com/vDVh64R.png">
+<meta name="twitter:title" content="Disruptor基础">
+<meta name="twitter:description" content="Disruptor Martin Fowler在自己网站上写了一篇LMAX架构的文章，在文章中他介绍了LMAX是一种新型零售金融交易平台，它能够以很低的延迟产生大量交易。这个系统是建立在JVM平台上，其核心是一个业务逻辑处理器，它能够在一个线程里每秒处理6百万订单。业务逻辑处理器完全是运行在内存中，使用事件源驱动方式。业务逻辑处理器的核心是Disruptor。  在Disruptor中，我们想实现">
+<meta name="twitter:image" content="http://i.imgur.com/nqzyhjh.png">
 
 
 
@@ -127,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/04/工厂方法模式/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/08/Disruptor基础/"/>
 
 
 
 
 
-  <title> 工厂方法模式 | Mind Palace </title>
+  <title> Disruptor基础 | Mind Palace </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -316,7 +317,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/04/工厂方法模式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/08/Disruptor基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="祝翔">
@@ -337,7 +338,7 @@
             
             
               
-                工厂方法模式
+                Disruptor基础
               
             
           </h1>
@@ -352,8 +353,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-04T00:00:00+08:00">
-                2017-05-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-08T00:00:00+08:00">
+                2017-05-08
               </time>
             
 
@@ -375,8 +376,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JAVA/" itemprop="url" rel="index">
-                    <span itemprop="name">JAVA</span>
+                  <a href="/categories/JAVA并发编程/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA并发编程</span>
                   </a>
                 </span>
 
@@ -392,7 +393,7 @@
 
           
           
-             <span id="/2017/05/04/工厂方法模式/" class="leancloud_visitors" data-flag-title="工厂方法模式">
+             <span id="/2017/05/08/Disruptor基础/" class="leancloud_visitors" data-flag-title="Disruptor基础">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -425,31 +426,41 @@
       
 
       
-        <blockquote>
-<p><strong>工厂方法模式（Factory Method）：</strong>定义一个创建对象的接口，让子类决定实例化哪个类。工厂方法使一个类的实例化延迟到子类。</p>
+        <h1 id="Disruptor"><a href="#Disruptor" class="headerlink" title="Disruptor"></a>Disruptor</h1><blockquote>
+<p>Martin Fowler在自己网站上写了一篇LMAX架构的文章，在文章中他介绍了LMAX是一种新型零售金融交易平台，它能够以很低的延迟产生大量交易。这个系统是建立在JVM平台上，其核心是一个业务逻辑处理器，<strong>它能够在一个线程里每秒处理6百万订单。</strong>业务逻辑处理器完全是运行在内存中，使用事件源驱动方式。业务逻辑处理器的核心是Disruptor。</p>
 </blockquote>
-<p><img src="http://i.imgur.com/vDVh64R.png" alt=""></p>
-<a id="more"></a>
-<p><strong>Operation.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">public interface Operation &#123;</div><div class="line">	public double getResult(double number1,double number2) throws Exception;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class OperationAdd implements Operation&#123;</div><div class="line">	@Override</div><div class="line">	public double getResult(double number1, double number2) &#123;</div><div class="line">		double result=0;</div><div class="line">		return result=number1+number2;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class OperationSub implements Operation&#123;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public double getResult(double number1, double number2) &#123;</div><div class="line">		double result=0;</div><div class="line">		return result=number1-number2;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class OperationMul implements Operation&#123;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public double getResult(double number1, double number2) &#123;</div><div class="line">		double result=0;</div><div class="line">		return result=number1*number2;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class OperationDiv implements Operation&#123;</div><div class="line">	@Override</div><div class="line">	public double getResult(double number1, double number2) throws Exception &#123;</div><div class="line">		double result=0;</div><div class="line">		if(number2==0)&#123;</div><div class="line">			throw new Exception(&quot;除数不能为0&quot;);</div><div class="line">		&#125;</div><div class="line">			result=number1/number2;</div><div class="line">		return result;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><strong>先构造一个工厂接口，然后加减乘除各自建造一个具体工厂去实现这个接口</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">public interface IFactory &#123;</div><div class="line">	Operation createOperation();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class AddFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public Operation createOperation() &#123;</div><div class="line">		return new OperationAdd();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class SubFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public Operation createOperation() &#123;</div><div class="line">		return new OperationSub();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class MulFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public Operation createOperation() &#123;</div><div class="line">		return new OperationMul();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class DivFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public Operation createOperation() &#123;</div><div class="line">		return new OperationDiv();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><strong>Test.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">package zx.factorymethod.test1;</div><div class="line"></div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) throws Exception &#123;</div><div class="line">		AddFactory addFactory = new AddFactory();</div><div class="line">		Operation operationAdd = addFactory.createOperation();</div><div class="line">		System.out.println(operationAdd.getResult(1, 1));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>工厂方法模式实现时，客户端需要决定实例化哪个工厂来实现运算类。也就是说，工厂方法模式把简单工厂的内部逻辑判断移到客户端代码来进行。如果想要加功能，本来是改工厂，现在是修改客户端。</p>
-<h2 id="具体实例-雷锋-志愿者工厂"><a href="#具体实例-雷锋-志愿者工厂" class="headerlink" title="具体实例(雷锋/志愿者工厂)"></a>具体实例(雷锋/志愿者工厂)</h2><h3 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h3><blockquote>
-<p><strong>简单工厂：根据传入的参数返回特定的对象。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public class LeiFeng &#123;</div><div class="line">	public void Sweep()&#123;</div><div class="line">		System.out.println(&quot;扫地&quot;);</div><div class="line">	&#125;</div><div class="line">	public void Wash()&#123;</div><div class="line">		System.out.println(&quot;洗衣&quot;);</div><div class="line">	&#125;</div><div class="line">	public void BuyRice()&#123;</div><div class="line">		System.out.println(&quot;买米&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class UnderGraduate extends LeiFeng&#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Volunteer extends LeiFeng&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h3><blockquote>
-<p><strong>工厂方法：根据创建的工厂类型，返回特定的对象</strong></p>
-</blockquote>
-<p>雷锋工厂<br><strong>IFactory.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public interface IFactory &#123;</div><div class="line">	LeiFeng createLeiFeng();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class UnderGraduateFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public LeiFeng createLeiFeng() &#123;</div><div class="line">		return new UnderGraduate();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class VolunteerFactory implements IFactory&#123;</div><div class="line">	@Override</div><div class="line">	public LeiFeng createLeiFeng() &#123;</div><div class="line">		return new Volunteer();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><em>IFactory为工厂接口，UnderGraduateFactory和VolunteerFactory为实现这个接口的具体工厂的实现。</em></p>
-<p>工厂方法模式的调用<br><strong>Test.java</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		IFactory underGraduateFactory = new UnderGraduateFactory();</div><div class="line">		LeiFeng leiFeng = underGraduateFactory.createLeiFeng();</div><div class="line">		leiFeng.Sweep();</div><div class="line">		leiFeng.BuyRice();</div><div class="line">		leiFeng.Wash();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p> <strong>工厂方法模式的使用场合</strong></p>
-<ul>
-<li>客户端不知道它要创建的具体是哪一个子类。</li>
-<li>一个类想要由自己的子类来定义某对象的创建过程。</li>
-<li>类将创建某对象的职责代理给一些帮助子类中的一个，并且你想要将哪-一个子类作为代理的信息进行局部化。</li>
+<h3 id="在Disruptor中，我们想实现hello-world-需要如下几步骤："><a href="#在Disruptor中，我们想实现hello-world-需要如下几步骤：" class="headerlink" title="在Disruptor中，我们想实现hello world 需要如下几步骤："></a>在Disruptor中，我们想实现hello world 需要如下几步骤：</h3><ul>
+<li>第一：建立一个Event类</li>
+<li>第二：建立一个工厂Event类，用于创建Event类实例对象</li>
+<li>第三：需要有一个监听事件类，用于处理数据（Event类）</li>
+<li>第四：我们需要进行测试代码编写。实例化Disruptor实例，配置一系列参数。然后我们对Disruptor实例绑定监听事件类，接受并处理数据。</li>
+<li>第五：在Disruptor中，真正存储数据的核心叫做RingBuffer，我们通过Disruptor实例拿到它，然后把数据生产出来，把数据加入到RingBuffer的实例对象中即可。</li>
 </ul>
-<p>源码：<a href="https://github.com/zxiang179/DesignPattern" target="_blank" rel="external">https://github.com/zxiang179/DesignPattern</a></p>
+<p><strong>Event类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public class LongEvent &#123;</div><div class="line"></div><div class="line">	private long value;</div><div class="line">	public long getValue() &#123;</div><div class="line">		return value;</div><div class="line">	&#125;</div><div class="line">	public void setValue(long value) &#123;</div><div class="line">		this.value = value;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>EventFactory类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//需要让disruptor为我们创建事件，我们同时还声明了一个EventFactory来实例化Event对象</div><div class="line">public class LongEventFactory implements EventFactory&#123;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public Object newInstance() &#123;</div><div class="line">		return new LongEvent();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>EventHandler类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class LongEventHandler implements EventHandler&lt;LongEvent&gt; &#123;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void onEvent(LongEvent longEvent, long l, boolean b)</div><div class="line">			throws Exception &#123;</div><div class="line">		System.out.println(longEvent.getValue());</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>LongEventProducer类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 很明显 当用一个简单队列来发布事件的时候会牵涉更多的细节，这是因为事件对象还需要预先创建。</div><div class="line"> * 发布事件最少需要两步：获取下一个事件槽并发布事件（发布事件的时候要使用try/finally保证事件一定被发布）</div><div class="line"> * 如果我们使用RingBuffer.next()获取一个事件槽，那么一定要发布对应的事件。</div><div class="line"> * 如果不能发布事件，那么会引起Disruptor状态的混乱。</div><div class="line"> * 尤其是在多个事件生产者的情况下会导致事件消费者失速，从而不得不重启应用才能恢复。</div><div class="line"> * @author Carl_Hugo</div><div class="line"> *</div><div class="line"> */</div><div class="line">public class LongEventProducer &#123;</div><div class="line">	</div><div class="line">	private final RingBuffer&lt;LongEvent&gt; ringBuffer;</div><div class="line">	</div><div class="line">	public LongEventProducer(RingBuffer&lt;LongEvent&gt; ringBuffer)&#123;</div><div class="line">		this.ringBuffer=ringBuffer;</div><div class="line">&#125;</div><div class="line">	</div><div class="line">	/**</div><div class="line">	 * onData用来发布事件，每调用一次就发布一次事件</div><div class="line">	 * 它的参数会通过事件传递给消费者</div><div class="line">	 * @param bb</div><div class="line">	 */</div><div class="line">	public void onData(ByteBuffer bb)&#123;</div><div class="line">		//1 可以把ringBuffer看作一个事件队列那么next就是得到下一个事件槽</div><div class="line">		long sequence = ringBuffer.next();</div><div class="line">		try &#123;</div><div class="line">			//2 用上面的一个索引取出一个空的事件用于填充(获取该序号对应的事件对象)</div><div class="line">			LongEvent longEvent = ringBuffer.get(sequence);</div><div class="line">			//3 获取要通过事件传递的业务数据</div><div class="line">			longEvent.setValue(bb.getLong(0));</div><div class="line">		&#125; finally&#123;</div><div class="line">			//4 发布事件</div><div class="line">			//注意，最后的ringBuffer.publish方法必须包含在finally中以确保必须得到调用，如果某个请求的sequence未被提交</div><div class="line">			ringBuffer.publish(sequence);	</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Main类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">public class LongEventMain &#123;</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//创建缓冲区</div><div class="line">		ExecutorService executor = Executors.newCachedThreadPool();</div><div class="line">		//创建工厂</div><div class="line">		LongEventFactory factory = new LongEventFactory();</div><div class="line">		//创建bufferSize，也就是RingBuffer的大小，必须是2的N次方</div><div class="line">		int ringBufferSize = 1024*1024;</div><div class="line">		</div><div class="line">		/*//BlockingWaitStrategy是最低效的策略，但其对CPU的消耗最小并且在各种不同的环境中能够提供更加一致的性能表现</div><div class="line">		WaitStrategy BLOCKING_WAIT = new BlockingWaitStrategy();</div><div class="line">		//SleepingWaitStrategy的性能表现和BlockingWaitStrategy差不多，对CPU消耗也类似，但其对生产者线程的影响最小，适合用于异步日志类的场景。</div><div class="line">		WaitStrategy SLEEPING_WAIT = new SleepingWaitStrategy();</div><div class="line">		//YieldingWaitStrategy的性能最好，适用于低延迟的系统。在要求性能极高且时间处理线程数小于CPU逻辑线程数的场景中，推荐使用此策略：例如CPU开启超线程策略</div><div class="line">		WaitStrategy YIELD_WAIT = new YieldingWaitStrategy();*/</div><div class="line">		</div><div class="line">		//创建Disruptor</div><div class="line">		//1 第一个参数为工厂类对象，用于创建一个个的LongEvent，LongEvent是实际的消费数据</div><div class="line">		//2 第二个参数是缓冲区大小</div><div class="line">		//3 第三个参数是线程池，进行Disruptor内部的数据接受处理调度</div><div class="line">		//4 第四个参数ProducerType.SINGLE和ProducerType.MULTI</div><div class="line">		//5 第五个参数是一种策略:WaitStrategy</div><div class="line">		Disruptor&lt;LongEvent&gt; disruptor = </div><div class="line">				new Disruptor&lt;LongEvent&gt;(factory, ringBufferSize, executor,ProducerType.SINGLE,new YieldingWaitStrategy());</div><div class="line">		//连接消费事件方法</div><div class="line">		disruptor.handleEventsWith(new LongEventHandler());</div><div class="line">		//启动</div><div class="line">		disruptor.start();</div><div class="line">		</div><div class="line">		//Disruptor的事件发布有两个阶段提交的过程</div><div class="line">		//使用该方法获得具体存放数据的容器ringBuffer(环形结构)</div><div class="line">		RingBuffer&lt;LongEvent&gt; ringBuffer = disruptor.getRingBuffer();</div><div class="line">		</div><div class="line">		LongEventProducer producer = new LongEventProducer(ringBuffer);</div><div class="line">//		LongEventProducerWithTranslator producer = new LongEventProducerWithTranslator(ringBuffer);</div><div class="line">		ByteBuffer byteBuffer = ByteBuffer.allocate(8);</div><div class="line">		for(long a=0;a&lt;100;a++)&#123;</div><div class="line">			byteBuffer.putLong(0,a);</div><div class="line">			producer.onData(byteBuffer);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		disruptor.shutdown();//关闭Disruptor，方法会堵塞，知道所有的事件都得到处理</div><div class="line">		executor.shutdown();//关闭Disruptor使用的线程池：如果需要的话，必须手动关闭，Disruptor在shutdown时不会自动关闭。</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>LongEventProducerWithTranslator类</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public class LongEventProducerWithTranslator &#123;</div><div class="line">	</div><div class="line">	//一个translator可以看作一个事件的初始化器，publicEvent方法会调用它</div><div class="line">	//填充Event</div><div class="line">	public static final EventTranslatorOneArg&lt;LongEvent, ByteBuffer&gt; TRANSLATOR =</div><div class="line">			new EventTranslatorOneArg&lt;LongEvent, ByteBuffer&gt;() &#123;</div><div class="line">				@Override</div><div class="line">				public void translateTo(LongEvent event, long sequence,ByteBuffer buffer) &#123;</div><div class="line">					event.setValue(buffer.getLong(0));</div><div class="line">				&#125;</div><div class="line">			&#125;;</div><div class="line">			</div><div class="line">	private final RingBuffer&lt;LongEvent&gt; ringBuffer;</div><div class="line">	</div><div class="line">	public LongEventProducerWithTranslator(RingBuffer&lt;LongEvent&gt; ringBuffer)&#123;</div><div class="line">		this.ringBuffer=ringBuffer;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public void onData(ByteBuffer buffer)&#123;</div><div class="line">		ringBuffer.publishEvent(TRANSLATOR,buffer);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>RingBuffer:</strong> 被看作Disruptor最主要的组件，然而从3.0开始RingBuffer仅仅负责存储和更新在Disruptor中流通的数据。对一些特殊的使用场景能够被用户(使用其他数据结构)完全替代。</p>
+<blockquote>
+<p><strong>ringbuffer到底是什么？</strong><br>答：嗯，正如名字所说的一样，它是一个环（首尾相接的环），你可以把它用做在不同上下文（线程）间传递数据的buffer。</p>
+</blockquote>
+<p>基本来说，ringbuffer拥有一个序号，这个序号指向数组中下一个可用元素<br><img src="http://i.imgur.com/nqzyhjh.png" alt=""></p>
+<p>随着你不停地填充这个buffer（可能也会有相应的读取），这个序号会一直增长，直到绕过这个环。</p>
+<p>要找到数组中当前序号指向的元素，可以通过mod操作：sequence mod array length = array index（取模操作）以上面的ringbuffer为例（java的mod语法）：12 % 10 = 2。很简单吧。<br>事实上，上图中的ringbuffer只有10个槽完全是个意外。如果槽的个数是2的N次方更有利于基于二进制的计算机进行计算。</p>
+<blockquote>
+<p><strong>ringbuffer的优点？</strong></p>
+<ul>
+<li>因为它是数组，所以要比链表快，而且有一个容易预测的访问模式。</li>
+<li>这是对CPU缓存友好的，也就是说在硬件级别，数组中的元素是会被预加载的，因此在ringbuffer当中，cpu无需时不时去主存加载数组中的下一个元素。</li>
+<li>其次，你可以为数组预先分配内存，使得数组对象一直存在（除非程序终止）。这就意味着不需要花大量的时间用于垃圾回收。此外，不像链表那样，需要为每一个添加到其上面的对象创造节点对象—对应的，当删除节点时，需要执行相应的内存清理操作。</li>
+</ul>
+</blockquote>
+<p><strong>Sequence:</strong> Disruptor使用Sequence来表示一个特殊组件处理的序号。和Disruptor一样，每个消费者(EventProcessor)都维持着一个Sequence。大部分的并发代码依赖这些Sequence值的运转，因此Sequence支持多种当前为AtomicLong类的特性。<br><strong>Sequencer:</strong> 这是Disruptor真正的核心。实现了这个接口的两种生产者（单生产者和多生产者）均实现了所有的并发算法，为了在生产者和消费者之间进行准确快速的数据传递。<br><strong>SequenceBarrier: </strong>由Sequencer生成，并且包含了已经发布的Sequence的引用，这些的Sequence源于Sequencer和一些独立的消费者的Sequence。它包含了决定是否有供消费者来消费的Event的逻辑。</p>
+<p><strong>WaitStrategy：</strong>决定一个消费者将如何等待生产者将Event置入Disruptor。<br><strong>EventProcessor：</strong>主要事件循环，处理Disruptor中的Event，并且拥有消费者的Sequence。它有一个实现类是BatchEventProcessor，包含了event loop有效的实现，并且将回调到一个EventHandler接口的实现对象。<br><strong>EventHandler：</strong>由用户实现并且代表了Disruptor中的一个消费者的接口。<br><strong>Producer：</strong>由用户实现，它调用RingBuffer来插入事件(Event)，在Disruptor中没有相应的实现代码，由用户实现。<br><strong>WorkProcessor：</strong>确保每个sequence只被一个processor消费，在同一个WorkPool中的处理多个WorkProcessor不会消费同样的sequence。<br><strong>WorkerPool：</strong>一个WorkProcessor池，其中WorkProcessor将消费Sequence，所以任务可以在实现WorkHandler接口的worker吃间移交。<br><strong>LifecycleAware：</strong>当BatchEventProcessor启动和停止时，于实现这个接口用于接收通知。</p>
+<h3 id="初看Disruptor，给人的印象就是RingBuffer是其核心，生产者向RingBuffer中写入元素，消费者从RingBuffer中消费元素，如下图："><a href="#初看Disruptor，给人的印象就是RingBuffer是其核心，生产者向RingBuffer中写入元素，消费者从RingBuffer中消费元素，如下图：" class="headerlink" title="初看Disruptor，给人的印象就是RingBuffer是其核心，生产者向RingBuffer中写入元素，消费者从RingBuffer中消费元素，如下图："></a>初看Disruptor，给人的印象就是RingBuffer是其核心，生产者向RingBuffer中写入元素，消费者从RingBuffer中消费元素，如下图：</h3><p><img src="http://i.imgur.com/nx2DiPG.png" alt=""></p>
+<p><a href="https://github.com/zxiang179/Disruptor" target="_blank" rel="external">源码 GitHub</a></p>
 
       
     </div>
@@ -500,7 +511,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
+            <a href="/tags/并发编程/" rel="tag"># 并发编程</a>
           
         </div>
       
@@ -513,18 +524,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/04/简单工厂模式/" rel="next" title="简单工厂模式">
-                <i class="fa fa-chevron-left"></i> 简单工厂模式
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/04/代理模式/" rel="prev" title="代理模式">
-                代理模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/04/观察者设计模式/" rel="prev" title="观察者设计模式">
+                观察者设计模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -694,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实例-雷锋-志愿者工厂"><span class="nav-number">1.</span> <span class="nav-text">具体实例(雷锋/志愿者工厂)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单工厂"><span class="nav-number">1.1.</span> <span class="nav-text">简单工厂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂方法"><span class="nav-number">1.2.</span> <span class="nav-text">工厂方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Disruptor"><span class="nav-number">1.</span> <span class="nav-text">Disruptor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在Disruptor中，我们想实现hello-world-需要如下几步骤："><span class="nav-number">1.0.1.</span> <span class="nav-text">在Disruptor中，我们想实现hello world 需要如下几步骤：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初看Disruptor，给人的印象就是RingBuffer是其核心，生产者向RingBuffer中写入元素，消费者从RingBuffer中消费元素，如下图："><span class="nav-number">1.0.2.</span> <span class="nav-text">初看Disruptor，给人的印象就是RingBuffer是其核心，生产者向RingBuffer中写入元素，消费者从RingBuffer中消费元素，如下图：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
